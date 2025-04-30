@@ -1,4 +1,5 @@
 namespace TodoList.Core;
+using TodoList.Core.Models;
 
 public class TodoService
 {
@@ -13,24 +14,24 @@ public class TodoService
     public List<TodoItem> Lister(bool inclureTerminees)
     {
         return _taches
-            .Where(t => inclureTerminees || !t.Terminee)
-            .OrderByDescending(t => t.Priorite)
-            .ThenBy(t => t.DateLimite ?? DateTime.MaxValue)
+            .Where(t => inclureTerminees || !t.IsDone)
+            .OrderByDescending(t => t.Priority)
+            .ThenBy(t => t.DueDate)
             .ToList();
     }
 
-    public void Ajouter(string nom, int priorite, DateTime? dateLimite)
+    public void Ajouter(string title, int priority, DateTime dueDate)
     {
-        var tache = new TodoItem { Nom = nom, Priorite = priorite, DateLimite = dateLimite };
+        var tache = new TodoItem { Title = title, Priority = priority, DueDate = dueDate };
         _taches.Add(tache);
         _dataAccess.Sauvegarder(_taches);
     }
 
-    public bool MarquerCommeTerminee(Guid id)
+    public bool MarquerCommeTerminee(int id)
     {
         var tache = _taches.FirstOrDefault(t => t.Id == id);
-        if (tache == null || tache.Terminee) return false;
-        tache.Terminee = true;
+        if (tache == null || tache.IsDone) return false;
+        tache.IsDone = true;
         _dataAccess.Sauvegarder(_taches);
         return true;
     }

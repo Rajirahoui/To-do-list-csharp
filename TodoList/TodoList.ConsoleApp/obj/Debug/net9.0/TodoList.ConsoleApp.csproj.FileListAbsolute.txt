@@ -17,3 +17,13 @@
 /Users/user/Documents/GitHub/To-do-list-c-/TodoList/TodoList.ConsoleApp/obj/Debug/net9.0/TodoList.ConsoleApp.pdb
 /Users/user/Documents/GitHub/To-do-list-c-/TodoList/TodoList.ConsoleApp/obj/Debug/net9.0/TodoList.ConsoleApp.genruntimeconfig.cache
 /Users/user/Documents/GitHub/To-do-list-c-/TodoList/TodoList.ConsoleApp/obj/Debug/net9.0/ref/TodoList.ConsoleApp.dll
+/Users/user/Documents/GitHub/To-do-list-c-/TodoList/TodoList.ConsoleApp/bin/Debug/net9.0/Microsoft.EntityFrameworkCore.dll
+/Users/user/Documents/GitHub/To-do-list-c-/TodoList/TodoList.ConsoleApp/bin/Debug/net9.0/Microsoft.EntityFrameworkCore.Abstractions.dll
+/Users/user/Documents/GitHub/To-do-list-c-/TodoList/TodoList.ConsoleApp/bin/Debug/net9.0/Microsoft.Extensions.Caching.Abstractions.dll
+/Users/user/Documents/GitHub/To-do-list-c-/TodoList/TodoList.ConsoleApp/bin/Debug/net9.0/Microsoft.Extensions.Caching.Memory.dll
+/Users/user/Documents/GitHub/To-do-list-c-/TodoList/TodoList.ConsoleApp/bin/Debug/net9.0/Microsoft.Extensions.DependencyInjection.dll
+/Users/user/Documents/GitHub/To-do-list-c-/TodoList/TodoList.ConsoleApp/bin/Debug/net9.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll
+/Users/user/Documents/GitHub/To-do-list-c-/TodoList/TodoList.ConsoleApp/bin/Debug/net9.0/Microsoft.Extensions.Logging.dll
+/Users/user/Documents/GitHub/To-do-list-c-/TodoList/TodoList.ConsoleApp/bin/Debug/net9.0/Microsoft.Extensions.Logging.Abstractions.dll
+/Users/user/Documents/GitHub/To-do-list-c-/TodoList/TodoList.ConsoleApp/bin/Debug/net9.0/Microsoft.Extensions.Options.dll
+/Users/user/Documents/GitHub/To-do-list-c-/TodoList/TodoList.ConsoleApp/bin/Debug/net9.0/Microsoft.Extensions.Primitives.dll

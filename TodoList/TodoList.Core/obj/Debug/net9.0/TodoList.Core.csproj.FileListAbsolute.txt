@@ -10,3 +10,4 @@
 /Users/user/Documents/GitHub/To-do-list-c-/TodoList/TodoList.Core/obj/Debug/net9.0/refint/TodoList.Core.dll
 /Users/user/Documents/GitHub/To-do-list-c-/TodoList/TodoList.Core/obj/Debug/net9.0/TodoList.Core.pdb
 /Users/user/Documents/GitHub/To-do-list-c-/TodoList/TodoList.Core/obj/Debug/net9.0/ref/TodoList.Core.dll
+/Users/user/Documents/GitHub/To-do-list-c-/TodoList/TodoList.Core/obj/Debug/net9.0/TodoList.Core.csproj.AssemblyReference.cache

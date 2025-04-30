@@ -9,7 +9,8 @@ while (true)
     Console.WriteLine("==== TODO LIST ====");
     foreach (var tache in service.Lister(afficherTerminees))
     {
-        Console.WriteLine($"{tache.Id} - {tache}");
+        var statut = tache.IsDone ? "[✓]" : "[ ]";
+        Console.WriteLine($"{statut} {tache.Id} - {tache.Title} (Priorité {tache.Priority}) - À faire pour le {tache.DueDate:yyyy-MM-dd}");
     }
 
     Console.WriteLine("\n1. Ajouter une tâche");
@@ -26,27 +27,32 @@ while (true)
             var nom = Console.ReadLine()!;
             Console.Write("Priorité (1-5): ");
             int priorite = int.Parse(Console.ReadLine()!);
-            Console.Write("Date limite (yyyy-MM-dd) (optionnelle): ");
+            Console.Write("Date limite (yyyy-MM-dd): ");
             var dateStr = Console.ReadLine();
-            DateTime? date = DateTime.TryParse(dateStr, out var d) ? d : null;
-            service.Ajouter(nom, priorite, date);
+            DateTime dueDate = DateTime.TryParse(dateStr, out var d) ? d : DateTime.Now.AddDays(7);
+            service.Ajouter(nom, priorite, dueDate);
             break;
+
         case "2":
             Console.Write("ID de la tâche à terminer: ");
-            if (Guid.TryParse(Console.ReadLine(), out var id))
+            if (int.TryParse(Console.ReadLine(), out var id))
             {
                 if (!service.MarquerCommeTerminee(id))
                     Console.WriteLine("Tâche introuvable ou déjà terminée.");
-                else Console.WriteLine("Tâche terminée !");
+                else
+                    Console.WriteLine("Tâche terminée !");
             }
             else Console.WriteLine("ID invalide.");
             Console.ReadKey();
             break;
+
         case "3":
             afficherTerminees = !afficherTerminees;
             break;
+
         case "0":
             return;
+
         default:
             Console.WriteLine("Choix invalide !");
             Console.ReadKey();
