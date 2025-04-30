@@ -1,0 +1,39 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v9.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v9.0": {
+      "TodoList.ConsoleApp/1.0.0": {
+        "dependencies": {
+          "TodoList.Core": "1.0.0"
+        },
+        "runtime": {
+          "TodoList.ConsoleApp.dll": {}
+        }
+      },
+      "TodoList.Core/1.0.0": {
+        "runtime": {
+          "TodoList.Core.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "TodoList.ConsoleApp/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "TodoList.Core/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

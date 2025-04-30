@@ -1,0 +1,12 @@
+/Users/user/Documents/GitHub/To-do-list-c-/TodoList/TodoList.Core/bin/Debug/net9.0/TodoList.Core.deps.json
+/Users/user/Documents/GitHub/To-do-list-c-/TodoList/TodoList.Core/bin/Debug/net9.0/TodoList.Core.dll
+/Users/user/Documents/GitHub/To-do-list-c-/TodoList/TodoList.Core/bin/Debug/net9.0/TodoList.Core.pdb
+/Users/user/Documents/GitHub/To-do-list-c-/TodoList/TodoList.Core/obj/Debug/net9.0/TodoList.Core.GeneratedMSBuildEditorConfig.editorconfig
+/Users/user/Documents/GitHub/To-do-list-c-/TodoList/TodoList.Core/obj/Debug/net9.0/TodoList.Core.AssemblyInfoInputs.cache
+/Users/user/Documents/GitHub/To-do-list-c-/TodoList/TodoList.Core/obj/Debug/net9.0/TodoList.Core.AssemblyInfo.cs
+/Users/user/Documents/GitHub/To-do-list-c-/TodoList/TodoList.Core/obj/Debug/net9.0/TodoList.Core.csproj.CoreCompileInputs.cache
+/Users/user/Documents/GitHub/To-do-list-c-/TodoList/TodoList.Core/obj/Debug/net9.0/TodoList.Core.sourcelink.json
+/Users/user/Documents/GitHub/To-do-list-c-/TodoList/TodoList.Core/obj/Debug/net9.0/TodoList.Core.dll
+/Users/user/Documents/GitHub/To-do-list-c-/TodoList/TodoList.Core/obj/Debug/net9.0/refint/TodoList.Core.dll
+/Users/user/Documents/GitHub/To-do-list-c-/TodoList/TodoList.Core/obj/Debug/net9.0/TodoList.Core.pdb
+/Users/user/Documents/GitHub/To-do-list-c-/TodoList/TodoList.Core/obj/Debug/net9.0/ref/TodoList.Core.dll
