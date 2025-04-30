@@ -1,41 +1,42 @@
-// Services/TodoService.cs
-using TodoList.Core.Data;
 using TodoList.Core.Models;
-using Microsoft.EntityFrameworkCore;
+using TodoList.Core;  // Utilisation de l'espace de noms de TodoServiceMemory
 
-namespace TodoList.Core.Services;
 
-public class TodoService
+namespace TodoList.Core
 {
-    private readonly ITodoDbContext _context;
-
-    public TodoService(ITodoDbContext context)
+    public class TodoServiceMemory
     {
-        _context = context;
-    }
+        private readonly TodoDataAccess _dataAccess = new();
+        private List<TodoItem> _taches;
 
-    public async Task<List<TodoItem>> GetAllSorted()
-    {
-        return await _context.TodoItems
-            .OrderBy(t => t.IsDone)
-            .ThenByDescending(t => t.Priority)
-            .ThenBy(t => t.DueDate)
-            .ToListAsync();
-    }
+        public TodoServiceMemory()
+        {
+            _taches = _dataAccess.Charger();
+        }
 
-    public async Task<List<TodoItem>> GetDoneTasks()
-    {
-        return await _context.TodoItems
-            .Where(t => t.IsDone)
-            .ToListAsync();
-    }
+        public List<TodoItem> Lister(bool inclureTerminees)
+        {
+            return _taches
+                .Where(t => inclureTerminees || !t.IsDone)
+                .OrderByDescending(t => t.Priority)
+                .ThenBy(t => t.DueDate)
+                .ToList();
+        }
 
-    public async Task MarkAsDone(int id)
-    {
-        var item = await _context.TodoItems.FindAsync(id);
-        if (item == null || item.IsDone) return;
+        public void Ajouter(string title, int priority, DateTime dueDate)
+        {
+            var tache = new TodoItem { Title = title, Priority = priority, DueDate = dueDate };
+            _taches.Add(tache);
+            _dataAccess.Sauvegarder(_taches);
+        }
 
-        item.IsDone = true;
-        await _context.SaveChangesAsync();
+        public bool MarquerCommeTerminee(int id)
+        {
+            var tache = _taches.FirstOrDefault(t => t.Id == id);
+            if (tache == null || tache.IsDone) return false;
+            tache.IsDone = true;
+            _dataAccess.Sauvegarder(_taches);
+            return true;
+        }
     }
 }

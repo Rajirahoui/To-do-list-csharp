@@ -1,6 +1,8 @@
 ﻿using TodoList.Core;
+using TodoList.Core.Models;
 
-var service = new TodoService();
+
+var service = new TodoServiceMemory();  // Changer ici
 bool afficherTerminees = true;
 
 while (true)
